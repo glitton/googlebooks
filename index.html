@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Books Search App</title>
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Google Font CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans" rel="stylesheet">
+    <!-- My CSS -->
+    <link rel="stylesheet" type="text/css" href="css/superhero.css">
+    <link rel="stylesheet" type="text/css" href="css/bookapp.css">
+</head>
+<body>
+  
+<!-- Navbar using the spacelab theme -->
+<!-- Theme source: https://bootswatch.com/spacelab/ -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <!-- Added a tooltip in logo, takes to home -->
+      <a class="navbar-brand tooltip-text" href="#" data-toggle="tooltip" data-placement="right" title="Take me home" data-original-title="Take me home">
+        <i class="fa fa-book fa-3x logo" aria-hidden="true"></i>
+      </a>  
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Share Book</a></li>
+        <li><a href="#">My Books</a></li>
+        <!-- Center area of nav, where quote are generated         -->
+        <form class="navbar-form nav-search" role="search">
+          <div class="form-group">
+            <input type="text" id="search" class="form-control" placeholder="Title or Author">
+          </div>
+          <button id="search-btn" type="button" class="btn btn-default">Search</button>
+      </form>         
+      </ul>
+
+      <!-- Right side of the nav -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Login</a></li>
+        <li><a href="#">Logout</a></li>
+        <li><a href="#">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <div class="container">
+    <div class="row col-lg-12">
+      <h1 class='quote-header'>
+        Your Book Search Results
+      </h1>
+    </div> 
+    <!-- Display results -->
+    <div id='results'>
+          
+    </div> 
+  </div>
+
+
+<!-- SCRIPTS -->
+  <!-- Font Awesome -->
+  <script src="https://use.fontawesome.com/b4869d6fbe.js"></script>
+  <!-- jQuery  -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.js"
+  integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+  crossorigin="anonymous"></script>
+  <!-- jQuery for Google API -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Bootstrap jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+  <!-- My JS -->
+  <script src="js/main.js"></script>   
+</body>
+</html>
