@@ -27,12 +27,21 @@ $(document).ready(function() {
           // Add message to results div
           document.getElementById('message').textContent = "Click Image to Get More Info"
 
-          // create div to show book image, add class and image source
+          // create an anchor tag to enable users to click on book image and get more info
+          var bookAnchor = document.createElement('a');
+          // Assign href link to bookAnchor
+          bookAnchor.href = booksData.infoLink;
+          // add taret = blank so it opens in a new tab
+          bookAnchor.setAttribute('target', '_blank');
+          // create image element so users can click it and get more book info
           var bookImg = document.createElement('img');
+          //add class and image source
           bookImg.className = 'images';
           bookImg.setAttribute('src', booksData.imageLinks.thumbnail);
-          // Append image to resultDiv
-          resultsDiv.appendChild(bookImg);
+          // Append image to anchor
+          bookAnchor.appendChild(bookImg);
+          // Append anchor to resultDiv
+          resultsDiv.appendChild(bookAnchor);
           
           // create title, author, publish elements
           var title   = document.createElement('h4');
