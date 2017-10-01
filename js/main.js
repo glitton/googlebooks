@@ -14,7 +14,7 @@ $(document).ready(function() {
       url: "https://www.googleapis.com/books/v1/volumes?q=" + search,
       dataType: "json",
       success: function(data) {
-        // See json data
+        // Show json data
         console.log(data)
         // loop through data and display results
         for (var i = 0; i < data.items.length; i++){
@@ -33,9 +33,10 @@ $(document).ready(function() {
           bookAnchor.href = booksData.infoLink;
           // add taret = blank so it opens in a new tab
           bookAnchor.setAttribute('target', '_blank');
+
           // create image element so users can click it and get more book info
           var bookImg = document.createElement('img');
-          //add class and image source
+          //add class and image source if there is one
           bookImg.className = 'images';
           bookImg.setAttribute('src', booksData.imageLinks.thumbnail);
           // Append image to anchor
