@@ -44,6 +44,7 @@
         <!-- Center area of nav, where quote are generated         -->
         <form class="navbar-form nav-search" role="search">
           <div class="form-group">
+          <button type="reset" class="btn btn-success">Reset</button>  
             <input type="text" id="search" class="form-control" placeholder="Title or Author">
           </div>
           <button id="search-btn" type="button" class="btn btn-default">Search</button>
@@ -61,10 +62,11 @@
 </nav>
 
   <div class="container">
-    <div class="row col-lg-12">
-      <h1 class='quote-header'>
+    <div class="row col-lg-12 search-header">
+      <h1>
         Your Book Search Results
       </h1>
+      <h3 id="message"></h3>
     </div> 
     <!-- Display results -->
     <div id='results'>
@@ -87,7 +89,16 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <!-- Bootstrap JS -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> 
+  <!-- Moment JS script -->
+  <script src="js/moment.js"></script>
+  <script>
+    moment().format();
+  </script>
   <!-- My JS -->
   <script src="js/main.js"></script>   
+
+<!-- <footer>
+  <p>Powered by Google Books</p>
+</footer> -->  
 </body>
 </html>

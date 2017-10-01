@@ -23,7 +23,9 @@ $(document).ready(function() {
 
           // create div to display each book record
           var resultsDiv = document.createElement('div');
-          resultsDiv.className = 'col-md-4 animated fadeIn';
+          resultsDiv.className = 'col-md-4 animated fadeIn books';
+          // Add message to results div
+          document.getElementById('message').textContent = "Click Image to Get More Info"
 
           // create div to show book image, add class and image source
           var bookImg = document.createElement('img');
@@ -33,23 +35,29 @@ $(document).ready(function() {
           resultsDiv.appendChild(bookImg);
           
           // create title, author, publish elements
-          var title   = document.createElement('h3');
-          var author  = document.createElement('h3');
-          var publish = document.createElement('h3');
+          var title   = document.createElement('h4');
+          var author  = document.createElement('h4');
+          var publish = document.createElement('h4');
           
           // add text to the title element
           var titleText   = document.createTextNode(booksData.title);
           
           // check if json has author listed then add text
           if (booksData.authors){
-            var authorText  = document.createTextNode('Author: ' + booksData.authors);
+            var authorText  = document.createTextNode('By ' + booksData.authors);
             } else {
               authorText = document.createTextNode('No author listed')
             }
-          }
 
           // check if json has publish data listed then add text
-          var publishText = document.createTextNode('Publish Date: ' + booksData.publishedDate);
+          // used moment.js to format the date to Month day, year
+          if (booksData.publishedDate) {
+            var date = moment(booksData.publishedDate).format('MMM DD, YYYY');
+            console.log(date);
+            var publishText = document.createTextNode('Published ' + date);
+            } else {
+            publishText = document.createTextNode('Publish date unknown');
+            }    
           
           // append text to elements
           title.appendChild(titleText);
