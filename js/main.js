@@ -26,6 +26,7 @@ $(document).ready(function() {
           resultsDiv.className = 'col-md-4 animated fadeIn books';
           // Add message to results div
           document.getElementById('message').textContent = "Click Image to Get More Info"
+          message.className = 'animated jello';
 
           // create an anchor tag to enable users to click on book image and get more info
           var bookAnchor = document.createElement('a');

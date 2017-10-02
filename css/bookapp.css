@@ -7,6 +7,8 @@
   height: 80px;
   border-radius: 0;
   font-size: 18px;
+  /*background-color: #186D8C;*/
+  background-color: #005D9C;
 
 }
 
@@ -30,6 +32,19 @@
 .search-header {
   text-align: center;
   margin: 30px auto 50px auto;
+}
+
+.btn-info {
+  /*background-color: #4C0D1B;*/
+  background-color: #5D0100;
+}
+
+.btn-default {
+  background-color: #9C9C00;
+}
+
+ul.nav.navbar-nav li a:hover {
+  background-color: #5bc0de;
 }
 
 h1 {
